@@ -15,6 +15,7 @@ public class BootDemoApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder()
                 .sources(BootDemoApplication.class)
+                .listeners()
                 .run(args);
     }
 }
