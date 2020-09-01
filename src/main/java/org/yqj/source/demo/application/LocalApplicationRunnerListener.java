@@ -3,10 +3,9 @@ package org.yqj.source.demo.application;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+
 
 /**
  * Description:
@@ -18,42 +17,48 @@ import org.springframework.core.env.ConfigurableEnvironment;
 @Slf4j
 public class LocalApplicationRunnerListener implements SpringApplicationRunListener {
 
-    public LocalApplicationRunnerListener(SpringApplication springApplication, String[] args) {
+    private final SpringApplication application;
+
+    private final String[] args;
+
+    public LocalApplicationRunnerListener(SpringApplication application, String[] args) {
+        this.application = application;
+        this.args = args;
     }
 
     @Override
     public void starting() {
-        log.info(" ** local application is starting");
+//        log.info(" ** local application is starting");
     }
 
     @Override
     public void environmentPrepared(ConfigurableEnvironment environment) {
-        log.info(" ** local application environmentPrepared");
+//        log.info(" ** local application environmentPrepared");
     }
 
     @Override
     public void contextPrepared(ConfigurableApplicationContext context) {
-        log.info(" ** local application contextPrepared");
+//        log.info(" ** local application contextPrepared");
     }
 
     @Override
     public void contextLoaded(ConfigurableApplicationContext context) {
-        log.info(" ** local application contextLoaded");
+//        log.info(" ** local application contextLoaded");
 
     }
 
     @Override
     public void started(ConfigurableApplicationContext context) {
-        log.info(" ** local application started");
+//        log.info(" ** local application started");
     }
 
     @Override
     public void running(ConfigurableApplicationContext context) {
-        log.info(" ** local application running");
+//        log.info(" ** local application running");
     }
 
     @Override
     public void failed(ConfigurableApplicationContext context, Throwable exception) {
-        log.info(" ** local application failed");
+//        log.info(" ** local application failed");
     }
 }

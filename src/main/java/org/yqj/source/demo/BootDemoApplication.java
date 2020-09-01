@@ -12,6 +12,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  */
 @SpringBootApplication
 public class BootDemoApplication {
+
+    private String name;
+
+    private Integer version;
+
     public static void main(String[] args) {
         new SpringApplicationBuilder()
                 .sources(BootDemoApplication.class)

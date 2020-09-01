@@ -1,2 +1,5 @@
 org.springframework.boot.SpringApplicationRunListener=\
 org.yqj.source.demo.application.LocalApplicationRunnerListener
+
+# Application Listeners
+org.springframework.context.ApplicationListener=org.yqj.source.demo.application.LocalApplicationListener
