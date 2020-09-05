@@ -9,16 +9,16 @@ import javax.annotation.PostConstruct;
  * Description:
  *
  * @author yaoqijun
- * @date 2020/9/1
+ * @date 2020/9/5
  * Email: yaoqijunmail@foxmail.com
  */
 @Component
 @Slf4j
-public class ComponentA {
+public class ComponentAChild extends ComponentA {
 
     @PostConstruct
-    public void init(){
-        log.info("********** component a is init :{}", this);
+    public void init() {
+        log.info("********* component a child init, parent:{}", this);
     }
 
 }
